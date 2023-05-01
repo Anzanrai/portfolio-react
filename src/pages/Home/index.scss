@@ -1,0 +1,35 @@
+@import '../../constants.scss';
+.home_container {
+    // width: 100vw;
+    height: 100vh;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    gap: 3rem;
+
+    .child {
+        position: relative;
+        padding-left: 5rem;
+        top: 5rem;
+        flex: 1;
+    }
+
+    .left {
+        min-width: 320px;
+    }
+
+    .right {
+        min-width: $xs-width;
+    }
+}
+
+@media (min-width: $xs-width) {
+    .content-wrapper {
+        .child {
+            padding-left: 10px;
+        }
+    }
+}

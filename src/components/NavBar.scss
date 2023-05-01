@@ -1,0 +1,80 @@
+@import '../constants.scss';
+
+.navbar-wrapper {
+    // width: 100%;
+    display: block;
+    height: 80px;
+    line-height: 80px;
+    position: sticky;
+    top: 0;
+    background-color: #242424;
+}
+.navbar {
+    // width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.burger-navbar {
+    position: relative;
+    // width: 100%;
+    // display: none;
+}
+
+ul {
+    list-style: none;
+
+    li {
+        text-decoration: none;
+    }
+
+    a{
+        position: relative;
+        font-size: 18px;
+        letter-spacing: 0.5px;
+        padding: 0 5px;
+        display: block;
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: rgb(118, 208, 208);
+            height: 3px;
+            width: 0;
+            left: 0;
+            bottom: -10px;
+            transition: 0.3s;
+        }
+
+        &:hover {
+            color: rgb(118, 208, 208);
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: $sm-width) {
+    .navbar {
+        display: none;
+    }
+
+    .burger-navbar {
+        display: block;
+        // right: -5rem;
+        text-align: end;
+
+        .icon {
+            z-index: 1;
+            line-height: 20px;
+            height: 20px;
+            width: 20px;
+        }
+    }
+}
