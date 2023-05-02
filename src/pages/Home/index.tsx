@@ -9,6 +9,23 @@ const Home = () => {
         <div className='content-wrapper'>
             <div className='child'>Here goes content for description</div>
             <div className='child right'>Here goes logo animation</div>
+            <div className='child'>Here goes content for description</div>
+            <div className='child right'>Here goes logo animation</div><div className='child'>Here goes content for description</div>
+            <div className='child right'>Here goes logo animation</div><div className='child'>Here goes content for description</div>
+            <div className='child right'>Here goes logo animation</div><div className='child'>Here goes content for description</div>
+            <div className='child right'>Here goes logo animation</div><div className='child'>Here goes content for description</div>
+            <div className='child right'>Here goes logo animation</div><div className='child'>Here goes content for description</div>
+            <div className='child right'>Here goes logo animation</div><div className='child'>Here goes content for description</div>
+            <div className='child right'>Here goes logo animation</div><div className='child'>Here goes content for description</div>
+            <div className='child right'>Here goes logo animation</div><div className='child'>Here goes content for description</div>
+            <div className='child right'>Here goes logo animation</div><div className='child'>Here goes content for description</div>
+            <div className='child right'>Here goes logo animation</div><div className='child'>Here goes content for description</div>
+            <div className='child right'>Here goes logo animation</div><div className='child'>Here goes content for description</div>
+            <div className='child right'>Here goes logo animation</div><div className='child'>Here goes content for description</div>
+            <div className='child right'>Here goes logo animation</div><div className='child'>Here goes content for description</div>
+            <div className='child right'>Here goes logo animation</div><div className='child'>Here goes content for description</div>
+            <div className='child right'>Here goes logo animation</div><div className='child'>Here goes content for description</div>
+            <div className='child right'>Here goes logo animation</div>
         </div>
     </div>
 }
