@@ -9,6 +9,7 @@
   position: sticky;
   top: 0;
   background-color: #242424;
+  z-index: 1;
 }
 .navbar {
   // width: fit-content;
@@ -23,6 +24,7 @@
   position: relative;
   // width: 100%;
   display: none;
+  z-index: 3;
 }
 
 ul {
@@ -62,9 +64,6 @@ ul {
 
 @media (max-width: $sm-width) {
   .navbar-wrapper {
-    //   position: absolute;
-
-    height: 3rem;
     line-height: 2rem;
     padding: 0;
     // margin-top: 50px;
@@ -73,23 +72,32 @@ ul {
     position: absolute;
     // top: 0;
     right: 0;
-    width: 50vw;
+    width: 60vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: $color;
+    background-color: $secondary-bg-color;
+    // opacity: 0.8;
+    // backdrop-filter: blur(4px);
     justify-content: flex-start;
     align-items: flex-start;
 
     &:nth-child(1) {
-      padding-top: 10vh;
+      padding-top: 15vh;
     }
 
     a {
       display: block;
-      color: $bg-color;
-      padding: 0 3rem;
+      color: $color;
+      margin: 0 2rem 1rem 2rem;
+      padding: 0;
       font-size: 0.8rem;
+      height: 2rem;
+
+      &::after {
+        height: 2px;
+        bottom: 0;
+      }
     }
   }
 
