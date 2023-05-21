@@ -2,9 +2,12 @@ import 'animate.css';
 import { FiMenu } from 'react-icons/fi';
 import {MdClose} from 'react-icons/md';
 import './NavBar.scss';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 const NavBar = () => {
+  const windowSize = useRef([window.innerWidth, window.innerHeight]);
+  const smWindow = windowSize.current[0] <= 768 ? true : false;
+  console.log(windowSize.current[0]);
   const links = [
     {
       linkTo: '/',
@@ -54,20 +57,23 @@ const NavBar = () => {
 
   return (
     <div className="navbar-wrapper" >
-      <ul className="navbar" style={{display: menuState?'flex': 'none'}}>
-        {links.map((link) => (
-          <li key={link.name}>
-            <a
-              id={link.name}
-              href={link.linkTo}
-              onMouseEnter={handleHoverIn}
-              onMouseLeave={handleHoverOut}
-            >
-              {link.linkTitle}
-            </a>
-          </li>
-        ))}
-      </ul>
+      <div className='navbar' style={{display: (smWindow ? (menuState ? 'flex' : 'none'): 'flex')}}>
+        <ul className="">
+          {links.map((link) => (
+            <li key={link.name}>
+              <a
+                id={link.name}
+                href={link.linkTo}
+                onMouseEnter={handleHoverIn}
+                onMouseLeave={handleHoverOut}
+              >
+                {link.linkTitle}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+      
       <div className="burger-navbar">
         {menuState ? (<MdClose className="icon" onClick={handleIconClick} />) : (
           <FiMenu className="icon" onClick={handleIconClick} />
