@@ -1,6 +1,6 @@
 import 'animate.css';
 import { FiMenu } from 'react-icons/fi';
-// import {MdClose} from 'react-icons/md';
+import {MdClose} from 'react-icons/md';
 import './NavBar.scss';
 import { useState } from 'react';
 
@@ -53,8 +53,8 @@ const NavBar = () => {
   };
 
   return (
-    <div className="navbar-wrapper">
-      <ul className="navbar">
+    <div className="navbar-wrapper" >
+      <ul className="navbar" style={{display: menuState?'flex': 'none'}}>
         {links.map((link) => (
           <li key={link.name}>
             <a
@@ -69,7 +69,7 @@ const NavBar = () => {
         ))}
       </ul>
       <div className="burger-navbar">
-        {menuState ? null : (
+        {menuState ? (<MdClose className="icon" onClick={handleIconClick} />) : (
           <FiMenu className="icon" onClick={handleIconClick} />
         )}
       </div>
