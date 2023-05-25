@@ -1,7 +1,7 @@
 import 'animate.css';
 import { FiMenu } from 'react-icons/fi';
 import {MdClose} from 'react-icons/md';
-import './NavBar.scss';
+import './index.scss';
 import { useState, useRef } from 'react';
 
 const NavBar = () => {
