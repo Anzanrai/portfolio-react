@@ -1,5 +1,3 @@
-import { logoPath } from '../../constants';
-
 import './index.scss';
 import html from '../../assets/images/html-logo.png';
 import css from '../../assets/images/css-logo.png';
@@ -12,7 +10,7 @@ import reactlogo from '../../assets/images/react-logo.png';
 import reduxlogo from '../../assets/images/Redux.png';
 import sasslogo from '../../assets/images/sass-logo.png';
 
-function InfiniteCarousel() {
+function Board() {
 
     const logos = [html, css, js, mongodb, mysql, node, postgresql, reactlogo, reduxlogo, sasslogo];
   return (
@@ -27,4 +25,4 @@ function InfiniteCarousel() {
   )
 }
 
-export default InfiniteCarousel
+export default Board
