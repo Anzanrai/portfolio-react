@@ -18,7 +18,7 @@ function Board() {
         <span>My Tech Stack</span>
         <div className='logo-slide'>
             {logos.map((logo, indx) => {
-                return <img src={logo} key={indx} alt={`logo-${logo}`} />
+                return <div><img src={logo} key={indx} alt={`logo-${logo}`} /></div>
             })}
         </div>
     </div>
