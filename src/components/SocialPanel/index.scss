@@ -1,0 +1,23 @@
+.container {
+  width: 90vw;
+  margin: 0 auto;
+  padding: 3rem 4rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem 2rem;
+}
+
+.iconWrapper {
+  padding: 10px;
+  text-align: center;
+  line-height: 2em;
+}
+
+.icon {
+  width: 2em;
+  height: 2em;
+  display: block;
+}
