@@ -1,0 +1,61 @@
+@import '../../constants.scss';
+.card-container {
+    width:80%;
+    margin: 3rem auto 0 auto;
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5rem;
+}
+
+.description-container {
+    margin: 3rem auto 0 auto;
+    width: 60%;
+    background-color: $secondary-bg-color;
+    padding: 10rem;
+    border-radius: 0 25rem 0 25rem;
+
+    p{
+        text-align: justify;
+        color: $color;
+        font-size: 18px;
+        font-weight: 400;
+    }
+}
+
+h2{
+    margin-top: 5rem;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+@media (max-width: $md-width) {
+    .description-container{
+        // border-radius: 0 10rem;
+    }
+}
+
+@media (max-width: $sm-width) {
+    .description-container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px 10px;
+        border-radius: 0 5rem;
+
+        p{
+            width: 80%;
+            margin: 0 auto;
+            text-align: justify;
+            color: $color;
+            font-size: 12px;
+            font-weight: 300;
+        }
+    }
+    .card-container{
+        margin: 0 auto;
+    }
+}
