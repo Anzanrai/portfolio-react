@@ -33,12 +33,6 @@ h2{
     text-align: center;
 }
 
-@media (max-width: $md-width) {
-    .description-container{
-        // border-radius: 0 10rem;
-    }
-}
-
 @media (max-width: $sm-width) {
     .description-container {
         width: 80%;
