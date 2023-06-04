@@ -1,15 +1,16 @@
 import React from 'react'
 import './index.scss';
 
-const Card = () => {
+
+const Card = (projectDetail: { imageLink: string; projectTitle: string; description: string; projectLink:string; }) => {
   return (
     <div className='card'>
       <div className='image'>
-        <img src ="https://i.pinimg.com/originals/a4/7b/a5/a47ba59b4a353e0928ef0551ca44f980.jpg"/>
+        <a href={projectDetail.projectLink} target='_blank' ><img src ={projectDetail.imageLink}/></a>
       </div>
       <div className='content'>
-        <h3>This is content</h3>
-        <p>DIn publishing and graphic design,           Lorem ipsum is a placeholder text               commonly used to demonstrate the visual         form of a document or a typeface without         relying on meaningful content.</p>
+      <a href={projectDetail.projectLink} target='_blank' ><h3>{projectDetail.projectTitle}</h3></a>
+        <p>{projectDetail.description}</p>
       </div>
     </div>
   )
