@@ -1,5 +1,6 @@
 import { DiGithubBadge } from 'react-icons/di';
 import { AiFillLinkedin } from 'react-icons/ai';
+import {FaTwitter} from 'react-icons/fa';
 import './index.scss';
 import { Link } from 'react-router-dom';
 import * as React from 'react';
@@ -8,8 +9,9 @@ const SocialPanel = () => {
   const githubLink: string = 'https://github.com/Anzanrai';
   const linkedinLink: string =
     'https://www.linkedin.com/in/anjan-rai-58197878/';
+  const twitterLink: string = 'https://twitter.com/anzan_rai';
   return (
-    <div className="container">
+    <footer className="container">
       <div className="iconWrapper">
         <Link to={githubLink} target="_blank">
           <DiGithubBadge className="icon" />
@@ -20,7 +22,12 @@ const SocialPanel = () => {
           <AiFillLinkedin className="icon" />
         </Link>
       </div>
-    </div>
+      <div className="iconWrapper">
+        <Link to={twitterLink} target="_blank">
+          <FaTwitter className="icon" />
+        </Link>
+      </div>
+    </footer>
   );
 };
 
