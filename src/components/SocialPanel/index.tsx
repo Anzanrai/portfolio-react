@@ -1,6 +1,7 @@
 import { DiGithubBadge } from 'react-icons/di';
 import { AiFillLinkedin } from 'react-icons/ai';
 import {FaTwitter} from 'react-icons/fa';
+import 'animate.css';
 import './index.scss';
 import { Link } from 'react-router-dom';
 import * as React from 'react';
@@ -10,6 +11,7 @@ const SocialPanel = () => {
   const linkedinLink: string =
     'https://www.linkedin.com/in/anjan-rai-58197878/';
   const twitterLink: string = 'https://twitter.com/anzan_rai';
+
   return (
     <footer className="container">
       <div className="iconWrapper">
