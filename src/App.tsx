@@ -4,9 +4,10 @@ import {
 } from "react-router-dom";
 
 import Home from "./pages/Home";
-import Portfolio from "./pages/Portfolio";
-import Resume from "./pages/Resume";
+import Projects from "./pages/Projects";
+import About from "./pages/About";
 import Contact from "./pages/Contact";
+import React from "react";
 
 
 const router = createBrowserRouter([
@@ -15,12 +16,12 @@ const router = createBrowserRouter([
     element: <Home/>
   },
   {
-    path: "/portfolio",
-    element: <Portfolio />
+    path: "/projects",
+    element: <Projects />
   },
   {
-    path: "/resume",
-    element: <Resume />
+    path: "/about-me",
+    element: <About />
   },
   {
     path: "/contact",

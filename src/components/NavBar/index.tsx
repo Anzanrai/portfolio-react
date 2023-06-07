@@ -3,6 +3,7 @@ import { FiMenu } from 'react-icons/fi';
 import {MdClose} from 'react-icons/md';
 import './index.scss';
 import { useState, useRef } from 'react';
+import React from 'react';
 
 const NavBar = () => {
   const windowSize = useRef([window.innerWidth, window.innerHeight]);
@@ -13,21 +14,21 @@ const NavBar = () => {
       linkTo: '/',
       name: 'aboutMe',
       hoverState: false,
-      linkTitle: 'About Me',
+      linkTitle: 'Home',
       className: '',
     },
     {
-      linkTo: '/portfolio',
+      linkTo: '/projects',
       name: 'portfolio',
       hoverState: false,
-      linkTitle: 'Portfolio',
+      linkTitle: 'Projects',
       className: '',
     },
     {
-      linkTo: '/resume',
+      linkTo: '/about-me',
       name: 'resume',
       hoverState: false,
-      linkTitle: 'Resume',
+      linkTitle: 'About Me',
       className: '',
     },
     {
