@@ -55,14 +55,7 @@
     display: inline-block;
 }
 
-.summary-content {
-    margin-top: 2rem;
-    text-align: justify;
-    span {
-        font-size: 1.5em;
-        
-    }
-}
+
 
 @media (max-width: $lg-width) {
     .child{
@@ -76,11 +69,7 @@
         }
     }
 
-    .summary-content{
-        span{
-            font-size: 1.5em;
-        }
-    }
+    
 }
 
 @media (max-width: $sm-width){
@@ -96,11 +85,5 @@
             font-size: 1em;
         }
         
-    }
-    .summary-content{
-        span{
-            font-size: 0.8em;
-        }
-    }
-    
+    }    
 }
