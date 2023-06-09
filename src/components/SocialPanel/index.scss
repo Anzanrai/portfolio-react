@@ -105,8 +105,8 @@
 }
 
 .icon {
-  width: 3em;
-  height: 3em;
+  width: 2em;
+  height: 2em;
   display: block;
 
   &:hover {
@@ -124,6 +124,7 @@
 
 @media (max-width: $sm-width) {
   .container{
+    width: 90vw;
     gap: 2rem 1rem;
   }
 
