@@ -14,15 +14,15 @@
 .description-container {
     margin: 3rem auto 0 auto;
     width: 60%;
-    background-color: $secondary-bg-color;
+    background-color: $secondary-color;
     padding: 10rem;
     border-radius: 0 25rem 0 25rem;
 
     p{
         text-align: justify;
-        color: $color;
+        color: $secondary-bg-color;
         font-size: 18px;
-        font-weight: 400;
+        font-weight: 600;
     }
 }
 
@@ -44,9 +44,9 @@ h2{
             width: 80%;
             margin: 0 auto;
             text-align: justify;
-            color: $color;
+            // color: $color;
             font-size: 12px;
-            font-weight: 300;
+            font-weight: 500;
         }
     }
     .card-container{
