@@ -3,6 +3,7 @@ import React from 'react';
 import './index.scss';
 import NavBar from '../../components/NavBar';
 import SocialPanel from '../../components/SocialPanel';
+import Hire from '../../components/Hire/index';
 
 interface experience {
   position: string;
@@ -127,6 +128,7 @@ function Resume() {
         </div>
       </div>
       <SocialPanel />
+      <Hire />
     </div>
   );
 }

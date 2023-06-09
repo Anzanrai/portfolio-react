@@ -1,13 +1,15 @@
-import NavBar from "../../components/NavBar/";
-import SocialPanel from "../../components/SocialPanel";
+import NavBar from '../../components/NavBar/';
+import SocialPanel from '../../components/SocialPanel';
+import Hire from '../../components/Hire';
 function Contact() {
   return (
     <div>
-        <NavBar />
-    Contact
-    <SocialPanel />
+      <NavBar />
+      Contact
+      <SocialPanel />
+      <Hire />
     </div>
-  )
+  );
 }
 
-export default Contact
+export default Contact;

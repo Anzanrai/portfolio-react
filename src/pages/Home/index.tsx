@@ -7,6 +7,7 @@ import Board from '../../components/Board';
 import TypedComponent from '../../components/TypedComponent';
 import SocialPanel from '../../components/SocialPanel/index';
 import React from 'react';
+import Hire from '../../components/Hire/index';
 
 const Home = () => {
   const banners = ['A Frontend Developer.', 'A Backend Developer.'];
@@ -29,11 +30,11 @@ const Home = () => {
               backSpeed={50}
             />
           </div>
-          
         </div>
         <Board />
       </div>
       <SocialPanel />
+      <Hire />
     </div>
   );
 };
