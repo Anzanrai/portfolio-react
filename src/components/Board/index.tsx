@@ -9,6 +9,7 @@ import postgresql from '../../assets/images/postgresql-logo.png';
 import reactlogo from '../../assets/images/react-logo.png';
 import reduxlogo from '../../assets/images/Redux.png';
 import sasslogo from '../../assets/images/sass-logo.png';
+import React from 'react';
 
 function Board() {
 

@@ -66,7 +66,8 @@
   width: 60vw;
   margin: 0 auto;
   padding: 80px 0;
-  background: rgb(211, 197, 197);
+  background: rgb(179, 173, 173);
+  border-radius: 5px;
   &-slide {
     display: flex;
     flex-wrap: wrap;
@@ -76,6 +77,7 @@
 
     img {
       height: 150px;
+      filter: drop-shadow(5px 10px 4px rgb(55, 54, 54));
 
       &:hover {
         -webkit-animation-name: heartBeat;
@@ -137,6 +139,7 @@
         display: block;
         height: 80px;
         margin: 0 10px;
+        filter: drop-shadow(2px 10px 10px rgb(55, 54, 54));
       }
     }
     span {
