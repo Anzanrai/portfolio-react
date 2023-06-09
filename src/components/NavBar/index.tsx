@@ -1,6 +1,6 @@
 import 'animate.css';
 import { FiMenu } from 'react-icons/fi';
-import {MdClose} from 'react-icons/md';
+import { MdClose } from 'react-icons/md';
 import './index.scss';
 import { useState, useRef } from 'react';
 import React from 'react';
@@ -42,8 +42,6 @@ const NavBar = () => {
 
   const handleHoverIn = (e: React.MouseEvent) => {
     e.target.className = 'animate__animated animate__jello';
-    // console.log(e.target.id);
-    // links.filter(link => (link.name === e.target.id ? link.className = !link.hoverState: link.hoverState));
   };
 
   const handleHoverOut = (e: React.MouseEvent) => {
@@ -57,8 +55,11 @@ const NavBar = () => {
   };
 
   return (
-    <div className="navbar-wrapper" >
-      <div className='navbar' style={{display: (smWindow ? (menuState ? 'flex' : 'none'): 'flex')}}>
+    <div className="navbar-wrapper">
+      <div
+        className="navbar"
+        style={{ display: smWindow ? (menuState ? 'flex' : 'none') : 'flex' }}
+      >
         <ul className="">
           {links.map((link) => (
             <li key={link.name}>
@@ -74,9 +75,11 @@ const NavBar = () => {
           ))}
         </ul>
       </div>
-      
+
       <div className="burger-navbar">
-        {menuState ? (<MdClose className="icon" onClick={handleIconClick} />) : (
+        {menuState ? (
+          <MdClose className="icon" onClick={handleIconClick} />
+        ) : (
           <FiMenu className="icon" onClick={handleIconClick} />
         )}
       </div>
