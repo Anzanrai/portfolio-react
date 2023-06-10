@@ -8,7 +8,7 @@ const Hire = (): React.ReactElement => {
   };
   return (
     <div className="hire-button" onClick={mailto}>
-      Hire Me
+      <a href="mailto:anzaan.rai@gmail.com">Hire Me</a>
     </div>
   );
 };
