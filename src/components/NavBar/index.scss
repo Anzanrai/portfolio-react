@@ -97,6 +97,8 @@ ul {
       // display: none;
       flex-direction: column;
       gap: 0.5rem;
+      justify-content: flex-start;
+      align-items: flex-start;
     }
 
     &:nth-child(1) {
