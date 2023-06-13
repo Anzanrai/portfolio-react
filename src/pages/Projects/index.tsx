@@ -4,7 +4,6 @@ import NavBar from '../../components/NavBar';
 import SocialPanel from '../../components/SocialPanel';
 import './index.scss';
 import Hire from '../../components/Hire/index';
-// import { client } from '../../../sanity/sanity-utils';
 import * as React from 'react';
 
 interface project {
