@@ -6,8 +6,9 @@ import NavBar from '../../components/NavBar';
 import Board from '../../components/Board';
 // import TypedComponent from '../../components/TypedComponent';
 import SocialPanel from '../../components/SocialPanel/index';
-import React from 'react';
+// import React from 'react';
 import Hire from '../../components/Hire/index';
+import * as React from 'react';
 
 const Home = () => {
   return (

@@ -3,7 +3,8 @@ import { FiMenu } from 'react-icons/fi';
 import { MdClose } from 'react-icons/md';
 import './index.scss';
 import { useState, useRef } from 'react';
-import React from 'react';
+import * as React from 'react';
+// import React from 'react';
 
 const NavBar = () => {
   const windowSize = useRef([window.innerWidth, window.innerHeight]);

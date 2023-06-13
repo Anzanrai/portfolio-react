@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+// import React,
+import { useState, useEffect } from 'react';
 
 import './index.scss';
 import NavBar from '../../components/NavBar';
 import SocialPanel from '../../components/SocialPanel';
 import Hire from '../../components/Hire/index';
 import { client } from '../../../sanity/sanity-utils';
+import * as React from 'react';
 
 interface experience {
   position: string;

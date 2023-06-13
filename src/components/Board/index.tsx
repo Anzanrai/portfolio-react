@@ -9,21 +9,36 @@ import postgresql from '../../assets/images/postgresql-logo.png';
 import reactlogo from '../../assets/images/react-logo.png';
 import reduxlogo from '../../assets/images/Redux.png';
 import sasslogo from '../../assets/images/sass-logo.png';
-import React from 'react';
+import * as React from 'react';
+// import React from 'react';
 
 function Board() {
-
-    const logos = [html, css, js, mongodb, mysql, node, postgresql, reactlogo, reduxlogo, sasslogo];
+  const logos = [
+    html,
+    css,
+    js,
+    mongodb,
+    mysql,
+    node,
+    postgresql,
+    reactlogo,
+    reduxlogo,
+    sasslogo,
+  ];
   return (
-    <div className='logo'>
-        <span>My Tech Stack</span>
-        <div className='logo-slide'>
-            {logos.map((logo, indx) => {
-                return <div><img src={logo} key={indx} alt={`logo-${logo}`} /></div>
-            })}
-        </div>
+    <div className="logo">
+      <span>My Tech Stack</span>
+      <div className="logo-slide">
+        {logos.map((logo, indx) => {
+          return (
+            <div>
+              <img src={logo} key={indx} alt={`logo-${logo}`} />
+            </div>
+          );
+        })}
+      </div>
     </div>
-  )
+  );
 }
 
-export default Board
+export default Board;

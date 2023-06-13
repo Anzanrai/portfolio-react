@@ -7,7 +7,8 @@ import { FaTwitter } from 'react-icons/fa';
 
 import './index.scss';
 import AnimatedBackground from '../../components/AnimatedBackground/index';
-import React from 'react';
+import * as React from 'react';
+// import React from 'react';
 
 const Contact = (): React.ReactElement => {
   return (
