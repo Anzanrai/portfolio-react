@@ -10,8 +10,6 @@ import React from 'react';
 import Hire from '../../components/Hire/index';
 
 const Home = () => {
-  const banners = ['A Frontend Developer.', 'A Backend Developer.'];
-
   return (
     <div className="home_container">
       <NavBar />
