@@ -4,7 +4,7 @@ import myPic from '../../assets/images/me.jpeg';
 import './index.scss';
 import NavBar from '../../components/NavBar';
 import Board from '../../components/Board';
-import TypedComponent from '../../components/TypedComponent';
+// import TypedComponent from '../../components/TypedComponent';
 import SocialPanel from '../../components/SocialPanel/index';
 import React from 'react';
 import Hire from '../../components/Hire/index';
@@ -24,11 +24,9 @@ const Home = () => {
             <span>I am Anjan Rai.</span>
           </div>
           <div className="child-content">
-            <TypedComponent
-              typedStrings={banners}
-              typeSpeed={100}
-              backSpeed={50}
-            />
+            <span className="variable-text">
+              A Front-end as well as a Backend Developer.
+            </span>
           </div>
         </div>
         <Board />
