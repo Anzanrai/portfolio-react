@@ -27,35 +27,92 @@ interface education {
 function Resume() {
   const summary =
     'I am a versatile developer proficient in frontend and backend technologies, with expertise in multiple programming languages. Skilled in HTML, CSS, and JavaScript, I create responsive user interfaces using frameworks like React, and Typescript. On the backend, I design RESTful APIs, handle data storage, and implement security measures. With a strong problem-solving ability, I troubleshoot and optimize code execution. I am experienced in agile environments, collaborating with cross-functional teams to deliver exceptional results. Proficient in communicating complex technical concepts, I am an effective team player. Adaptable to new technologies, my skills ensure the development of robust and user-friendly web applications.';
-  const [experiences, setExperiences] = useState<experience[]>([]);
-  const [educations, setEducations] = useState<education[]>([]);
 
-  useEffect(() => {
-    client
-      .fetch(
-        `*[_type == "experience"]{
-        _id, _createdAt, position, jobType, startDate, endDate, officeName, location
-      }`
-      )
-      .then((result: any) => {
-        setExperiences(result);
-      })
-      .catch((error: any) => console.log(error));
+  const experiences: experience[] = [
+    {
+      position: 'Software Developer',
+      jobType: 'part-time',
+      startDate: 'January 2021',
+      endDate: 'March 2022',
+      officeName: 'Robonomics AI',
+      location: 'Sydney, New South Wales, Australia',
+    },
+    {
+      position: 'Software Developer Intern',
+      jobType: 'part-time',
+      startDate: 'September 2020',
+      endDate: 'January 2021',
+      officeName: 'Robonomics AI',
+      location: 'Sydney, New South Wales, Australia',
+    },
+    {
+      position: 'Software Developer Intern',
+      jobType: 'fulltime',
+      startDate: 'April 2020',
+      endDate: 'July 2020',
+      officeName: 'Robonomics AI',
+      location: 'Sydney, New South Wales, Australia',
+    },
+    {
+      position: 'Software Engineer',
+      jobType: 'fulltime',
+      startDate: 'November 2016',
+      endDate: 'March 2018',
+      officeName: 'InfiniaHub',
+      location: 'Tinkune, Subidha Nagar, Kathmandu, Nepal',
+    },
+    {
+      position: 'Software Engineer',
+      jobType: 'fulltime',
+      startDate: 'November 2014',
+      endDate: 'November 2016',
+      officeName: 'Deerwalk Services Pvt. Ltd.',
+      location: 'Tamreshwor Mahadevsthan, Sifal, Kathmandu, Nepal',
+    },
+  ];
+  const educations: education[] = [
+    {
+      degree: 'Masters of Technology (Software Engineering)',
+      institute: 'Federation University',
+      studyDate: 'March 2018 - November 2019',
+      location: 'Sydney, New South Wales, Australia',
+    },
+    {
+      degree: 'Bachelors in Computer Engineering',
+      institute: 'Institute of Engineering, Pulchowk Campus',
+      studyDate: 'November 2010 - July 2014',
+      location: 'Pulchowk Lalitpur, Bagmati, Nepal',
+    },
+  ];
+  // const [experiences, setExperiences] = useState<experience[]>([]);
+  // const [educations, setEducations] = useState<education[]>([]);
 
-    client
-      .fetch(
-        `*[_type == "education"]{
-        _id, _createdAt, degree, institute, studyDate, location
-      }`
-      )
-      .then((result: any) => {
-        setEducations(result);
-      })
-      .catch((error: any) => console.log(error));
-    return () => {
-      console.log('Component will be unmount');
-    };
-  }, []);
+  // useEffect(() => {
+  //   client
+  //     .fetch(
+  //       `*[_type == "experience"]{
+  //       _id, _createdAt, position, jobType, startDate, endDate, officeName, location
+  //     }`
+  //     )
+  //     .then((result: any) => {
+  //       setExperiences(result);
+  //     })
+  //     .catch((error: any) => console.log(error));
+
+  //   client
+  //     .fetch(
+  //       `*[_type == "education"]{
+  //       _id, _createdAt, degree, institute, studyDate, location
+  //     }`
+  //     )
+  //     .then((result: any) => {
+  //       setEducations(result);
+  //     })
+  //     .catch((error: any) => console.log(error));
+  //   return () => {
+  //     console.log('Component will be unmount');
+  //   };
+  // }, []);
 
   return (
     <div className="resume-page">

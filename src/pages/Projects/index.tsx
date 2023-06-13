@@ -1,33 +1,74 @@
-// import React,
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import Card from '../../components/Card';
 import NavBar from '../../components/NavBar';
 import SocialPanel from '../../components/SocialPanel';
 import './index.scss';
 import Hire from '../../components/Hire/index';
-import { client } from '../../../sanity/sanity-utils';
+// import { client } from '../../../sanity/sanity-utils';
 import * as React from 'react';
+import Flappy from '../../assets/images/flappy-logo.png';
+import GlobalMedics from '../../assets/images/globalmedics-logo.gif';
+import Muzicly from '../../assets/images/muzicly-logo.png';
+import Revvedai from '../../assets/images/revved-ai-logo.png';
+
+interface project {
+  projectTitle: string;
+  description: string;
+  imageLink: string;
+  projectLink: string;
+}
 
 const Portfolio = () => {
-  const [sanityProjects, setSanityProjects] = useState([]);
+  const projects: project[] = [
+    {
+      projectTitle: 'Muzicly',
+      description:
+        'The Music Player App is a ReactJS and Redux-powered application similar to Spotify. It utilizes the ShazamCore API for retrieving music-related data, providing users with a seamless music streaming experience. Search for songs, create playlists, and enjoy uninterrupted playback in this dynamic and intuitive app.',
+      imageLink: Muzicly,
+      projectLink: 'https://muzicly.netlify.app/',
+    },
+    {
+      projectTitle: 'GlobalMedics',
+      description:
+        'GlobalMedics is a MERN stack project that facilitated remote communication between doctors and patients during COVID-19. It provided virtual appointments, medical information, and mental health support, improving healthcare accessibility.',
+      imageLink: GlobalMedics,
+      projectLink: 'https://globalmedics.ai/',
+    },
+    {
+      projectTitle: 'RevvedAI',
+      description:
+        'At Revved AI, I worked as a backend developer using MongoDB, Node.js, and Express.js to create an AI-based learning and coaching platform to help improve the learning procedure of students.',
+      imageLink: Revvedai,
+      projectLink: 'https://www.revved.ai/',
+    },
+    {
+      projectTitle: 'Flappy Bird - Clone',
+      description:
+        'The Flappy Bird Clone project is a recreation of the popular mobile game using HTML, CSS, and JavaScript. It showcases my skills in front-end web development by combining structured HTML, visually appealing CSS, and interactive JavaScript to create a fun and engaging Flappy Bird clone that can be played directly in a web browser.',
+      imageLink: Flappy,
+      projectLink: 'https://flappy-bird-app.netlify.app/',
+    },
+  ];
 
-  useEffect(() => {
-    client
-      .fetch(
-        `*[_type == "project"]{
-        _id, _createdAt, projectTitle, description, "imageLink": imageLink.asset->url, url, projectLink
-      }`
-      )
-      .then((result: any) => {
-        setSanityProjects(result);
-      })
-      .catch((error: any) => console.log(error));
-    return () => {
-      console.log('Component will be unmount');
-    };
-  }, []);
+  // const [sanityProjects, setSanityProjects] = useState([]);
 
-  console.log('Projects from sanity', sanityProjects);
+  // useEffect(() => {
+  //   client
+  //     .fetch(
+  //       `*[_type == "project"]{
+  //       _id, _createdAt, projectTitle, description, "imageLink": imageLink.asset->url, url, projectLink
+  //     }`
+  //     )
+  //     .then((result: any) => {
+  //       setSanityProjects(result);
+  //     })
+  //     .catch((error: any) => console.log(error));
+  //   return () => {
+  //     console.log('Component will be unmount');
+  //   };
+  // }, []);
+
+  // console.log('Projects from sanity', sanityProjects);
 
   return (
     <>
@@ -52,7 +93,7 @@ const Portfolio = () => {
 
       <h2>My Projects</h2>
       <div className="card-container">
-        {sanityProjects?.map(
+        {projects?.map(
           ({ imageLink, projectLink, projectTitle, description }, i) => (
             <Card
               key={i}
