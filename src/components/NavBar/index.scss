@@ -64,6 +64,10 @@ ul {
 
     &:hover {
       color: $secondary-accent-color;
+      // -webkit-animation-name: jello;
+      // animation-name: jello;
+      // -webkit-transform-origin: center;
+      // transform-origin: center;
     }
 
     &:hover::after {
@@ -112,6 +116,13 @@ ul {
       padding: 0;
       font-size: 0.8rem;
       height: 2rem;
+
+      // &:hover {
+      //   -webkit-animation-name: jello;
+      //   animation-name: jello;
+      //   -webkit-transform-origin: center;
+      //   transform-origin: center;
+      // }
 
       &::after {
         height: 2px;

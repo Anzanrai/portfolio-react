@@ -40,14 +40,6 @@ const NavBar = () => {
     },
   ];
 
-  const handleHoverIn = (e: React.MouseEvent) => {
-    e.target.className = 'animate__animated animate__jello';
-  };
-
-  const handleHoverOut = (e: React.MouseEvent) => {
-    e.target.className = '';
-  };
-
   const [menuState, setMenuState] = useState(false);
 
   const handleIconClick = () => {
@@ -63,12 +55,7 @@ const NavBar = () => {
         <ul className="">
           {links.map((link) => (
             <li key={link.name}>
-              <a
-                id={link.name}
-                href={link.linkTo}
-                onMouseEnter={handleHoverIn}
-                onMouseLeave={handleHoverOut}
-              >
+              <a id={link.name} href={link.linkTo}>
                 {link.linkTitle}
               </a>
             </li>
