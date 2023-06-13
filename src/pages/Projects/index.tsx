@@ -6,10 +6,6 @@ import './index.scss';
 import Hire from '../../components/Hire/index';
 // import { client } from '../../../sanity/sanity-utils';
 import * as React from 'react';
-import Flappy from '../../assets/images/flappy-logo.png';
-import GlobalMedics from '../../assets/images/globalmedics-logo.gif';
-import Muzicly from '../../assets/images/muzicly-logo.png';
-import Revvedai from '../../assets/images/revved-ai-logo.png';
 
 interface project {
   projectTitle: string;
