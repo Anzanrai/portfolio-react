@@ -94,7 +94,7 @@ function Resume() {
             <h2>Experience</h2>
             {experiences.map((exp, i) => {
               return (
-                <div className="exp">
+                <div className="exp" key={i}>
                   <h3>{exp.position}</h3>
                   <span className="exp-office">{`${exp.officeName}`}</span>
                   <br />
